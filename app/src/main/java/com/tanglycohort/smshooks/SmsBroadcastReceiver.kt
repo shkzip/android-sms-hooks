@@ -37,11 +37,6 @@ class SmsBroadcastReceiver : BroadcastReceiver() {
                         "WEBHOOK_URL" to webhookUrl
                     )
                 )
-                setConstraints(
-                    Constraints.Builder()
-                        .setRequiredNetworkType(NetworkType.CONNECTED)
-                        .build()
-                )
                 workManager.enqueue(this.build())
             }
         }
